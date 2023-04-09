@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>mainpage</title>
+</head>
+<body>
+    <div class = "mainheader">
+        <h1>HMS</h1>
+    </div>
+    <div class = "mainsidebar">
+        <button class = "tabbutton" onclick="openCity(event, 'Dashboard')">Dashboard </button>
+        <button class = "tabbutton" onclick="openCity(event, 'Patient')">Patient</button>
+            <ul>
+                <button class = "tabbutton" onclick="openCity(event, 'Add Patient')">Add Patient</button>
+                <button class = "tabbutton" onclick="openCity(event, 'View Patient List')">View Patient List</button>
+                <button class = "tabbutton" onclick="openCity(event, 'Manage Patient')">Manage Patient</button>
+            </ul>
+        <button class = "tabbutton" onclick="openCity(event, 'Doctor')">Doctor</button>
+            <ul>
+                <button class = "tabbutton" onclick="openCity(event, 'Add Doctor')">Add Doctor</button>
+                <button class = "tabbutton" onclick="openCity(event, 'View Doctor')">View Doctor</button>
+                <button class = "tabbutton" onclick="openCity(event, 'Manage Doctor')">Manage Doctor</button>
+            </ul>
+    </div>
+    <div id = "Dashboard" class="tabcontent" style="display: none;">
+        <h2>Dashboard</h2>
+        <div class="innerbox">
+            bla bla
+        </div>
+    </div>
+    <div id = "Patient" class="tabcontent" style="display: none;">
+        <h2>Patient</h2>
+        <div class="innerbox">
+            <div class="coloumn1">
+                <h2>Number of Registered Patient</h2>
+            </div>
+            <div class="coloumn2">
+                <h2>Number of patient</h2>
+            </div>
+        </div>
+    </div>
+    <div id = "Add Patient" class="tabcontent" style="display: none;">
+        <h2>Add Patient</h2>
+        <form action="/action_page.php">
+            <div class="innerbox">
+                    <label style="font-size: 110%;">FirstName :</label>
+                    <input type="text" placeholder="FirstName">
+                    <label style="font-size: 110%;">LastName :</label>
+                    <input type="text" placeholder="LastName">
+                    <label style="font-size: 110%;">Date Of Birth :</label>
+                    <input type="text" placeholder="Date Of Birth">
+                    <label style="font-size: 110%;">Mobile Number :</label>
+                    <input type="text" placeholder="Mobile Number">
+                    <label style="font-size: 110%;">Address :</label>
+                    <input type="text" placeholder="Address">
+                    <button class = "add">Add Patient</button>
+            </div>
+        </form>
+    </div>
+    <div id = "View Patient List" class="tabcontent" style="display: none;">
+        <h2>View Patient List</h2>
+        <div class="innerbox">
+            bla bla
+        </div>
+    </div>
+    <div id = "Manage Patient" class="tabcontent" style="display: none;">
+        <h2>Manage Patient</h2>
+        <div class="innerbox">
+            bla bla
+        </div>
+    </div>
+    <div id = "Doctor" class="tabcontent" style="display: none;">
+        <h2>Doctor</h2>
+        <div class="innerbox">
+            <div class="coloumn1">
+                <h2>Number of Registered Doctor</h2>
+            </div>
+            <div class="coloumn2">
+                <h2>Number of Doctor</h2>
+            </div>
+        </div>
+    </div>
+    <div id = "Add Doctor" class="tabcontent" style="display: none;">
+        <h2>Add Doctor</h2>
+        <form action="/action2_page.php">
+            <div class="innerbox">
+                <div class="name">
+                    <label style="font-size: 110%;">FirstName :</label>
+                    <input type="text" placeholder="FirstName">
+                    <label style="font-size: 110%;">LastName :</label>
+                    <input type="text" placeholder="LastName">
+                </div>
+                <div class="birthnumber">
+                    <label style="font-size: 110%;">Date Of Birth :</label>
+                    <input type="text" placeholder="Date Of Birth">
+                    <label style="font-size: 110%;">Mobile Number :</label>
+                    <input type="text" placeholder="Mobile Number">
+                </div>
+                <div class="address">
+                    <label style="font-size: 110%;">Address :</label>
+                    <input type="text" placeholder="Address">
+                </div>
+                <button class = "add">Add Doctor</button>
+            </div>
+        </form>
+    </div>
+    <div id = "View Doctor" class="tabcontent" style="display: none;">
+        <h2>View Doctor</h2>
+        <div class="innerbox">
+            bla bla
+        </div>
+    </div>
+    <div id = "Manage Doctor" class="tabcontent" style="display: none;">
+        <h2>Manage Doctor</h2>
+        <div class="innerbox">
+            bla bla
+        </div>
+    </div>
+
+</body>
+</html>
+
+<style>
+body {
+    background-image: url('https://img.wallpaper.sc/iphone5s/images/iphone5s-744x1392-wallpaper_03203.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
+    background-size: 100% 100%;
+}
+.tabbutton {
+    display: block;
+    background-color: inherit;
+    color: black;
+    padding: 22px 16px;
+    width: 100%;
+    border: none;
+    outline: none;
+    text-align: left;
+    cursor: pointer;
+    transition: 0.3s;
+}  
+
+.tabbutton:hover {
+    background-color: #1f80c6;
+}
+
+.tabcontent {
+    margin-left: 22%;
+    position: fixed;
+    width: 80%;
+}
+
+* {box-sizing: border-box}
+
+.mainsidebar {
+    border-style: solid;
+    border-color: rgb(0, 0, 0);
+    float: left;
+    width: 20%;
+}
+
+.innerbox{
+    margin-top: 7%;
+    margin-left: 24%;
+    position: fixed;
+    width: 10%;
+}
+
+label {
+  display: inline-block; 
+  vertical-align: middle; 
+}
+
+input {
+    margin-bottom: 10%;
+    display: inline-block; 
+    vertical-align: middle; 
+}
+
+.add{
+    margin-left: 2%;
+    position: fixed;
+}
+</style>
+
+<script>
+    function openCity(evt, cityName) {
+      var i, tabcontent, tablinks;
+      tabcontent = document.getElementsByClassName("tabcontent");
+      for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+      }
+      tablinks = document.getElementsByClassName("tablinks");
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+      }
+      document.getElementById(cityName).style.display = "block";
+      evt.currentTarget.className += " active";
+    }
+    
+    document.getElementById("defaultOpen").click();
+</script>
